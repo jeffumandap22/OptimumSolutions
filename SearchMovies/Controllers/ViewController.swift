@@ -6,8 +6,14 @@
 //
 
 import UIKit
-
+extension ViewController: SearchPresenterProtocol {
+    func showSearchResults(results: SearchResults) {
+        print("Results: \(results)")
+    }
+}
 class ViewController: UIViewController {
+    
+    
     
     private var presenter: SearchPresenter?
     
@@ -22,6 +28,7 @@ class ViewController: UIViewController {
         let viewModel = SearchViewModel(repository: repository)
         let presenter = SearchPresenter(viewModel: viewModel)
         setup(presenter: presenter)
+        presenter.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {

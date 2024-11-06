@@ -11,8 +11,7 @@ import RxSwift
 import UIKit
 
 protocol SearchPresenterProtocol: AnyObject {
-    func login()
-    
+    func showSearchResults(results: SearchResults)
 }
 
 typealias SearchPresenterDelegate = SearchPresenterProtocol & UIViewController
@@ -43,6 +42,7 @@ class SearchPresenter: NSObject {
                 break
             case .success(let data):
                 print("search results: \(data)")
+                self.delegate?.showSearchResults(results: data)
                 
             case .error(let errorCode):
                 print("errorCode: \(errorCode)")

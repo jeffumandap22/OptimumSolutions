@@ -87,24 +87,3 @@ extension SearchService: TargetType {
         }
     }
 }
-
-public struct SearchRequest: Codable {
-    let apikey: String
-    let s: String
-}
-
-
-
-extension Encodable {
-    func asDictionary() -> [String: Any] {
-        do {
-            let data = try JSONEncoder().encode(self)
-            guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-                return [:]
-            }
-            return dictionary
-        } catch {
-            return [:]
-        }
-    }
-}
