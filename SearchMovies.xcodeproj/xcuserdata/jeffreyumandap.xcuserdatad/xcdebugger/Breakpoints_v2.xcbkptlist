@@ -142,8 +142,8 @@
             filePath = "SearchMovies/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "bindSearchResults()"
             landmarkType = "7">
             <Locations>
@@ -190,8 +190,8 @@
             filePath = "SearchMovies/Presenter/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "bindSearchResults()"
             landmarkType = "7">
             <Locations>
@@ -263,22 +263,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0446457D-A6D2-4BD5-B6C3-3E6CE30ABD9E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SearchMovies/Presenter/Presenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "bindSearchResults()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E77132BF-9802-44A0-976F-DC073058ABB6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -318,8 +302,8 @@
             filePath = "SearchMovies/Controllers/MoviesSearchController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,65 +359,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F598DFFE-222D-4A80-9D87-D1FDB93B6BB3"
-            shouldBeEnabled = "Yes"
+            uuid = "957F9966-ED52-49E0-8732-8D4448FAFD5B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SearchMovies/Controllers/Main/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "showSearchResults(results:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "presentMovieController()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F598DFFE-222D-4A80-9D87-D1FDB93B6BB3 - e7da5124f57051c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SearchMovies.ViewController.showSearchResults(results: SearchMovies.SearchResults) -&gt; ()"
-                  moduleName = "SearchMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/Controllers/Main/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "628">
-               </Location>
-               <Location
-                  uuid = "F598DFFE-222D-4A80-9D87-D1FDB93B6BB3 - e7da5124f57051e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SearchMovies.ViewController.showSearchResults(results: SearchMovies.SearchResults) -&gt; ()"
-                  moduleName = "SearchMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/Controllers/Main/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "628">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "957F9966-ED52-49E0-8732-8D4448FAFD5B"
+            uuid = "A512AD2C-41D2-401D-A7AE-4B0F75EA3960"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SearchMovies/Controllers/Main/ViewController.swift"
+            filePath = "SearchMovies/Controllers/MoviesSearchController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "search()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "searchTapped(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A512AD2C-41D2-401D-A7AE-4B0F75EA3960 - e80362c4938dfc84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SearchMovies.MoviesSearchController.searchTapped(Any) -&gt; ()"
+                  moduleName = "SearchMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/Controllers/MoviesSearchController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "A512AD2C-41D2-401D-A7AE-4B0F75EA3960 - e80362c4938dfc84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SearchMovies.MoviesSearchController.searchTapped(Any) -&gt; ()"
+                  moduleName = "SearchMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/Controllers/MoviesSearchController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

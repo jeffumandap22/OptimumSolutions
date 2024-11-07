@@ -32,7 +32,7 @@ class SearchViewModel {
     }
 }
     
-    
+// MARK: - Resource enum
 public enum Resource<T> {
     case none, loading, success(data: T), error(errorCode: String)
 }

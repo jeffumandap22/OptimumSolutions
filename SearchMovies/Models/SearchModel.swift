@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 struct SearchResults: Codable {
-    let search: [Movie]?
+    let results: [Movie]?
     let totalResults: String?
     let response: String?
 
     enum CodingKeys: String, CodingKey {
-        case search = "Search"
+        case results = "Search"
         case totalResults
         case response = "Response"
     }

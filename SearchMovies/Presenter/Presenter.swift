@@ -30,10 +30,6 @@ class SearchPresenter: NSObject {
         self.viewModel = viewModel
         self.disposeBag = DisposeBag()
     }
-
-    public func search() {
-        viewModel.search(request: SearchRequest(apikey: "8d6aa4ca", s: "Spiderman"))
-    }
     
     fileprivate func bindSearchResults() {
         viewModel.data.subscribe(onNext: { resource in

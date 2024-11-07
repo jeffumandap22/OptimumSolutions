@@ -8,9 +8,29 @@
 import UIKit
 
 class MoviesSearchController: UIViewController {
+    private var presenter: SearchPresenter?
+    
     var searchResults: [Movie] = []
     
+    @IBOutlet weak var noDataView: UIImageView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBAction func searchTapped(_ sender: Any) {
+        guard let searchText = searchField.text, !searchText.isEmpty else {
+            searchField.placeholder = "Input movie name here.."
+            return
+        }
+        searchField.resignFirstResponder()
+        presenter?.viewModel.search(request: SearchRequest(apikey: "8d6aa4ca", s: searchText))
+    }
+    
+    func setup(presenter: SearchPresenter) {
+        self.presenter = presenter
+        self.presenter?.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +38,42 @@ class MoviesSearchController: UIViewController {
         collectionView.dataSource = self
         let cell = UINib.init(nibName: "MoviesCell", bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: "MoviesCell")
+        setup()
+    }
+    
+    
+    private func setup() {
+        let service = ApiService(baseUrl: "https://omdbapi.com/")
+        let repository = SearchRepository(service: service)
+        let viewModel = SearchViewModel(repository: repository)
+        let presenter = SearchPresenter(viewModel: viewModel)
+        setup(presenter: presenter)
+    }
+    
+    func search() {
+        presenter?.viewModel.search(request: SearchRequest(apikey: "8d6aa4ca", s: "Spiderman"))
     }
 }
 
+// MARK: - Protocol
+extension MoviesSearchController: SearchPresenterProtocol {
+    func showSearchResults(results: SearchResults) {
+        guard let movies = results.results, !movies.isEmpty else {
+            resultsLabel.text = "No movies available"
+            searchResults = []
+            collectionView.reloadData()
+            noDataView.isHidden = false
+            return
+        }
+        noDataView.isHidden = true
+        resultsLabel.text = "Total results: \(results.totalResults ?? "") movies"
+        searchResults = movies
+        collectionView.reloadData()
+    }
+}
+
+
+// MARK: - DataSource, Delegate & Layout
 extension MoviesSearchController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchResults.count
@@ -41,3 +94,4 @@ extension MoviesSearchController: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }
+

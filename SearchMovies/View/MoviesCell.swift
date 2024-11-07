@@ -15,10 +15,12 @@ class MoviesCell: UICollectionViewCell {
             movieTitle.text = movie?.title
             movieYear.text = movie?.year
             
-            guard let imageURL = URL(string: movie?.poster ?? "") else {
+            let placeHolderImage = #imageLiteral(resourceName: "placeholder_image_error")
+            guard let imageUrlStr = movie?.poster, let imageURL = URL(string: imageUrlStr) else {
+                movieImage.image = placeHolderImage
                 return
             }
-            movieImage.sd_setImage(with: imageURL, placeholderImage: #imageLiteral(resourceName: "placeholder_image_error"))
+            movieImage.sd_setImage(with: imageURL, placeholderImage: placeHolderImage)
         }
     }
 
