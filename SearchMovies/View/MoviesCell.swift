@@ -7,13 +7,18 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class MoviesCell: UICollectionViewCell {
-    static let identifier = "MoviesCell"
     var movie: Movie? {
         didSet {
             movieTitle.text = movie?.title
             movieYear.text = movie?.year
+            
+            guard let imageURL = URL(string: movie?.poster ?? "") else {
+                return
+            }
+            movieImage.sd_setImage(with: imageURL, placeholderImage: #imageLiteral(resourceName: "placeholder_image_error"))
         }
     }
 
@@ -38,8 +43,8 @@ class MoviesCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        //movieImage
         movieYear.text = ""
         movieTitle.text = ""
+        movieImage.image = nil
     }
 }

@@ -28,18 +28,15 @@ extension MoviesSearchController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCell
-        
         let movie = searchResults[indexPath.row]
         cell.movie = movie
-        cell.view.backgroundColor = .blue
-        cell.movieImage.backgroundColor = .gray
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, 
+    func collectionView(_ collectionView: UICollectionView, 
+                        layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let cellHeight = collectionView.bounds.height / 8
+        let cellHeight = collectionView.bounds.height / 5
         let cellWidth = collectionView.bounds.width / 2.1
         return CGSize(width: cellWidth, height: cellHeight)
     }

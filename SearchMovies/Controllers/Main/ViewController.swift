@@ -13,7 +13,7 @@ extension ViewController: SearchPresenterProtocol {
         print("Results: \(results)")
         let controller = MoviesSearchController()
         controller.searchResults = results.search ?? []
-        self.present(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     @IBAction func searchTapped(_ sender: Any) {
         print("Searched")
         let controller = MoviesSearchController()
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func setup(presenter: SearchPresenter) {

@@ -11,6 +11,7 @@
 		075A11DC2CDC45B80039206F /* MoviesSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075A11DA2CDC45B80039206F /* MoviesSearchController.xib */; };
 		075A11E02CDC47590039206F /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A11DE2CDC47590039206F /* MoviesCell.swift */; };
 		075A11E12CDC47590039206F /* MoviesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075A11DF2CDC47590039206F /* MoviesCell.xib */; };
+		075A11E42CDC5F6F0039206F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 075A11E32CDC5F6F0039206F /* SDWebImage */; };
 		077A5FCC2CDB6B3000433ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A5FCB2CDB6B3000433ED0 /* AppDelegate.swift */; };
 		077A5FCE2CDB6B3000433ED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A5FCD2CDB6B3000433ED0 /* SceneDelegate.swift */; };
 		077A5FD02CDB6B3000433ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A5FCF2CDB6B3000433ED0 /* ViewController.swift */; };
@@ -85,6 +86,7 @@
 				077A600A2CDB772000433ED0 /* Alamofire in Frameworks */,
 				077A60182CDB86B800433ED0 /* RxRelay in Frameworks */,
 				077A5FFF2CDB6F7600433ED0 /* SkeletonView in Frameworks */,
+				075A11E42CDC5F6F0039206F /* SDWebImage in Frameworks */,
 				077A600C2CDB772500433ED0 /* Moya in Frameworks */,
 				077A601F2CDB8BBE00433ED0 /* SwinjectAutoregistration in Frameworks */,
 				077A60022CDB6FC100433ED0 /* Localize_Swift in Frameworks */,
@@ -275,6 +277,7 @@
 				077A60172CDB86B800433ED0 /* RxRelay */,
 				077A60192CDB86B800433ED0 /* RxSwift */,
 				077A601E2CDB8BBE00433ED0 /* SwinjectAutoregistration */,
+				075A11E32CDC5F6F0039206F /* SDWebImage */,
 			);
 			productName = SearchMovies;
 			productReference = 077A5FC82CDB6B3000433ED0 /* SearchMovies.app */;
@@ -355,6 +358,7 @@
 				077A60032CDB713600433ED0 /* XCRemoteSwiftPackageReference "Moya" */,
 				077A60162CDB86AA00433ED0 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				077A601D2CDB8BA300433ED0 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				075A11E22CDC5F620039206F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 077A5FC92CDB6B3000433ED0 /* Products */;
 			projectDirPath = "";
@@ -758,6 +762,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		075A11E22CDC5F620039206F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
 		077A5FFC2CDB6E6100433ED0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -809,6 +821,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		075A11E32CDC5F6F0039206F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 075A11E22CDC5F620039206F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		077A5FFE2CDB6F7600433ED0 /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 077A5FFD2CDB6F7600433ED0 /* XCRemoteSwiftPackageReference "SkeletonView" */;
