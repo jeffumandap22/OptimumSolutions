@@ -42,12 +42,12 @@ open class BaseApiProvider<Target: TargetType>: MoyaProvider<Target> {
 }
 
 public enum SearchService {
-    //MARK: - Login OTP
     case searchMovie(request: SearchRequest)
 }
 
 extension SearchService: TargetType {
     public var baseURL: URL {
+        // MARK: - API URL
         //return URL(string: "https://omdbapi.com/")!
         return URL(string: searchBaseUrl)!
     }

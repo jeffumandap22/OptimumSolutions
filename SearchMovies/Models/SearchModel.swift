@@ -12,11 +12,13 @@ struct SearchResults: Codable {
     let results: [Movie]?
     let totalResults: String?
     let response: String?
+    let error: String?
 
     enum CodingKeys: String, CodingKey {
         case results = "Search"
         case totalResults
         case response = "Response"
+        case error = "Error"
     }
 }
 

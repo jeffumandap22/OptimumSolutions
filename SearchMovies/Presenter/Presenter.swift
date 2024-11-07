@@ -12,6 +12,7 @@ import UIKit
 
 protocol SearchPresenterProtocol: AnyObject {
     func showSearchResults(results: SearchResults)
+    func showErrorOnApi(error: String)
 }
 
 typealias SearchPresenterDelegate = SearchPresenterProtocol & UIViewController
@@ -37,11 +38,10 @@ class SearchPresenter: NSObject {
             case .none, .loading:
                 break
             case .success(let data):
-                print("search results: \(data)")
                 self.delegate?.showSearchResults(results: data)
                 
             case .error(let errorCode):
-                print("errorCode: \(errorCode)")
+                self.delegate?.showErrorOnApi(error: errorCode)
             }
         })
         .disposed(by: disposeBag)

@@ -9,6 +9,7 @@ import UIKit
 
 class MoviesSearchController: UIViewController {
     private var presenter: SearchPresenter?
+    var apiKey: String?
     
     var searchResults: [Movie] = []
     
@@ -24,7 +25,7 @@ class MoviesSearchController: UIViewController {
             return
         }
         searchField.resignFirstResponder()
-        presenter?.viewModel.search(request: SearchRequest(apikey: "8d6aa4ca", s: searchText))
+        presenter?.viewModel.search(request: SearchRequest(apikey: apiKey ?? "", s: searchText))
     }
     
     func setup(presenter: SearchPresenter) {
@@ -49,14 +50,14 @@ class MoviesSearchController: UIViewController {
         let presenter = SearchPresenter(viewModel: viewModel)
         setup(presenter: presenter)
     }
-    
-    func search() {
-        presenter?.viewModel.search(request: SearchRequest(apikey: "8d6aa4ca", s: "Spiderman"))
-    }
 }
 
 // MARK: - Protocol
 extension MoviesSearchController: SearchPresenterProtocol {
+    func showErrorOnApi(error: String) {
+        showError(error: error, isDismissAction: true)
+    }
+    
     func showSearchResults(results: SearchResults) {
         guard let movies = results.results, !movies.isEmpty else {
             resultsLabel.text = "No movies available"
@@ -94,4 +95,3 @@ extension MoviesSearchController: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }
-

@@ -25,7 +25,11 @@ class SearchViewModel {
     func search(request: SearchRequest) {
         data.accept(.loading)
         repository.searchMovie(request: request).subscribe(onSuccess: { [weak self] response in
-            self?.data.accept(.success(data: response))
+            if response.response?.lowercased() == "false" && response.error != "Movie not found!" {
+                self?.data.accept(.error(errorCode: "API KEY INVALID"))
+            } else {
+                self?.data.accept(.success(data: response))
+            }
         }, onFailure: { [weak self] error in
             self?.data.accept(.error(errorCode: error.localizedDescription))
         }).disposed(by: disposeBag)

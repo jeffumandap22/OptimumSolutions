@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     
     func presentMovieController() {
         let controller = MoviesSearchController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        guard let apiKeyValue = apiKeyField.text, !apiKeyValue.isEmpty else {
+            showError(error: "Please input API key")
+            return
+        }
+        controller.apiKey = apiKeyValue
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
