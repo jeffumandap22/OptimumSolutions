@@ -19,8 +19,6 @@
 		077A5FD32CDB6B3000433ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077A5FD12CDB6B3000433ED0 /* Main.storyboard */; };
 		077A5FD52CDB6B3100433ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 077A5FD42CDB6B3100433ED0 /* Assets.xcassets */; };
 		077A5FD82CDB6B3100433ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077A5FD62CDB6B3100433ED0 /* LaunchScreen.storyboard */; };
-		077A5FFF2CDB6F7600433ED0 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 077A5FFE2CDB6F7600433ED0 /* SkeletonView */; };
-		077A60022CDB6FC100433ED0 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 077A60012CDB6FC100433ED0 /* Localize_Swift */; };
 		077A60052CDB728000433ED0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A60042CDB728000433ED0 /* Service.swift */; };
 		077A60072CDB75DB00433ED0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A60062CDB75DB00433ED0 /* Repository.swift */; };
 		077A600A2CDB772000433ED0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 077A60092CDB772000433ED0 /* Alamofire */; };
@@ -32,7 +30,6 @@
 		077A60182CDB86B800433ED0 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 077A60172CDB86B800433ED0 /* RxRelay */; };
 		077A601A2CDB86B800433ED0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 077A60192CDB86B800433ED0 /* RxSwift */; };
 		077A601C2CDB88B200433ED0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A601B2CDB88B200433ED0 /* Presenter.swift */; };
-		077A601F2CDB8BBE00433ED0 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 077A601E2CDB8BBE00433ED0 /* SwinjectAutoregistration */; };
 		077A60362CDBBE4E00433ED0 /* SearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A60352CDBBE4E00433ED0 /* SearchRequestModel.swift */; };
 		077A60382CDBBE8000433ED0 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A60372CDBBE8000433ED0 /* Encodable.swift */; };
 /* End PBXBuildFile section */
@@ -87,11 +84,8 @@
 				077A600E2CDB772A00433ED0 /* RxMoya in Frameworks */,
 				077A600A2CDB772000433ED0 /* Alamofire in Frameworks */,
 				077A60182CDB86B800433ED0 /* RxRelay in Frameworks */,
-				077A5FFF2CDB6F7600433ED0 /* SkeletonView in Frameworks */,
 				075A11E42CDC5F6F0039206F /* SDWebImage in Frameworks */,
 				077A600C2CDB772500433ED0 /* Moya in Frameworks */,
-				077A601F2CDB8BBE00433ED0 /* SwinjectAutoregistration in Frameworks */,
-				077A60022CDB6FC100433ED0 /* Localize_Swift in Frameworks */,
 				077A601A2CDB86B800433ED0 /* RxSwift in Frameworks */,
 				077A60122CDB7BB100433ED0 /* ReactiveMoya in Frameworks */,
 			);
@@ -271,15 +265,12 @@
 			);
 			name = SearchMovies;
 			packageProductDependencies = (
-				077A5FFE2CDB6F7600433ED0 /* SkeletonView */,
-				077A60012CDB6FC100433ED0 /* Localize_Swift */,
 				077A60092CDB772000433ED0 /* Alamofire */,
 				077A600B2CDB772500433ED0 /* Moya */,
 				077A600D2CDB772A00433ED0 /* RxMoya */,
 				077A60112CDB7BB100433ED0 /* ReactiveMoya */,
 				077A60172CDB86B800433ED0 /* RxRelay */,
 				077A60192CDB86B800433ED0 /* RxSwift */,
-				077A601E2CDB8BBE00433ED0 /* SwinjectAutoregistration */,
 				075A11E32CDC5F6F0039206F /* SDWebImage */,
 			);
 			productName = SearchMovies;
@@ -356,11 +347,8 @@
 			mainGroup = 077A5FBF2CDB6B3000433ED0;
 			packageReferences = (
 				077A5FFC2CDB6E6100433ED0 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				077A5FFD2CDB6F7600433ED0 /* XCRemoteSwiftPackageReference "SkeletonView" */,
-				077A60002CDB6FC100433ED0 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 				077A60032CDB713600433ED0 /* XCRemoteSwiftPackageReference "Moya" */,
 				077A60162CDB86AA00433ED0 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				077A601D2CDB8BA300433ED0 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				075A11E22CDC5F620039206F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 077A5FC92CDB6B3000433ED0 /* Products */;
@@ -780,22 +768,6 @@
 				minimumVersion = 5.10.1;
 			};
 		};
-		077A5FFD2CDB6F7600433ED0 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Juanpe/SkeletonView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.31.0;
-			};
-		};
-		077A60002CDB6FC100433ED0 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.0;
-			};
-		};
 		077A60032CDB713600433ED0 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya/";
@@ -812,14 +784,6 @@
 				minimumVersion = 6.8.0;
 			};
 		};
-		077A601D2CDB8BA300433ED0 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -827,16 +791,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 075A11E22CDC5F620039206F /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
-		};
-		077A5FFE2CDB6F7600433ED0 /* SkeletonView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 077A5FFD2CDB6F7600433ED0 /* XCRemoteSwiftPackageReference "SkeletonView" */;
-			productName = SkeletonView;
-		};
-		077A60012CDB6FC100433ED0 /* Localize_Swift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 077A60002CDB6FC100433ED0 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
-			productName = Localize_Swift;
 		};
 		077A60092CDB772000433ED0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -867,11 +821,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 077A60162CDB86AA00433ED0 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		077A601E2CDB8BBE00433ED0 /* SwinjectAutoregistration */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 077A601D2CDB8BA300433ED0 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
-			productName = SwinjectAutoregistration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
