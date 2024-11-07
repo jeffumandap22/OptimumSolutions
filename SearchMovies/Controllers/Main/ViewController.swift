@@ -5,17 +5,30 @@
 //  Created by Jeffrey Umandap on 11/6/24.
 //
 
+import Foundation
 import UIKit
+
 extension ViewController: SearchPresenterProtocol {
     func showSearchResults(results: SearchResults) {
         print("Results: \(results)")
+        let controller = MoviesSearchController()
+        controller.searchResults = results.search ?? []
+        self.present(controller, animated: true)
     }
 }
+
 class ViewController: UIViewController {
-    
-    
-    
     private var presenter: SearchPresenter?
+    
+    @IBOutlet weak var apiKeyField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    @IBAction func searchTapped(_ sender: Any) {
+        print("Searched")
+        let controller = MoviesSearchController()
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+    }
     
     func setup(presenter: SearchPresenter) {
         self.presenter = presenter

@@ -136,7 +136,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F201EF54-D15C-4B1E-BF20-CCB51F7543DC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SearchMovies/Presenter/Presenter.swift"
@@ -184,7 +184,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "74A76362-2EDC-4E87-865E-C3A17B036E81"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SearchMovies/Presenter/Presenter.swift"
@@ -318,8 +318,8 @@
             filePath = "SearchMovies/Controllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "search()"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,10 +334,74 @@
             filePath = "SearchMovies/Controllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "showSearchResults(results:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D8B12F5-666B-48AE-BA11-E8F62CF4C36F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SearchMovies/Controllers/MoviesSearchController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A0B00FF-9720-4F85-A38C-0DA643C7CA10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SearchMovies/View/MoviesCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "movie"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0A0B00FF-9720-4F85-A38C-0DA643C7CA10 - 739cc24a295de1cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SearchMovies.MoviesCell.movie.didset : Swift.Optional&lt;SearchMovies.Movie&gt;"
+                  moduleName = "SearchMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/View/MoviesCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "820">
+               </Location>
+               <Location
+                  uuid = "0A0B00FF-9720-4F85-A38C-0DA643C7CA10 - 739cc24a295de1cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SearchMovies.MoviesCell.movie.didset : Swift.Optional&lt;SearchMovies.Movie&gt;"
+                  moduleName = "SearchMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeffreyumandap/OptimumSolutions/SearchMovies/View/MoviesCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

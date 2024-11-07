@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoviesCell" id="gTV-IL-0wX" customClass="MoviesCell" customModule="SearchMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="301" height="169"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsD-L3-TwT">
+                        <rect key="frame" x="0.0" y="0.0" width="301" height="169"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-Sr-h9S">
+                                <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="169"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-na-Q0T">
+                                <rect key="frame" x="105.33333333333333" y="44" width="189.66666666666669" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spider Man Home Coming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UK-HT-U2L">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.66666666666666" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year: 2017" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIH-fG-5WA">
+                                        <rect key="frame" x="0.0" y="40.666666666666671" width="189.66666666666666" height="40.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rgD-Sr-h9S" firstAttribute="width" secondItem="SsD-L3-TwT" secondAttribute="width" multiplier="0.33" id="8SX-w7-byb"/>
+                            <constraint firstItem="rgD-Sr-h9S" firstAttribute="top" secondItem="SsD-L3-TwT" secondAttribute="top" id="E0G-W8-IE8"/>
+                            <constraint firstAttribute="trailing" secondItem="Dcz-na-Q0T" secondAttribute="trailing" constant="6" id="K2I-ME-4Iz"/>
+                            <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="Dcz-na-Q0T" secondAttribute="bottom" constant="2" id="KuD-KX-tDC"/>
+                            <constraint firstItem="Dcz-na-Q0T" firstAttribute="top" relation="lessThanOrEqual" secondItem="SsD-L3-TwT" secondAttribute="topMargin" constant="2" id="aBe-zv-wzG"/>
+                            <constraint firstAttribute="bottom" secondItem="rgD-Sr-h9S" secondAttribute="bottom" id="d7e-av-gCQ"/>
+                            <constraint firstItem="Dcz-na-Q0T" firstAttribute="leading" secondItem="rgD-Sr-h9S" secondAttribute="trailing" constant="6" id="gcf-oI-ZdG"/>
+                            <constraint firstItem="Dcz-na-Q0T" firstAttribute="centerY" secondItem="SsD-L3-TwT" secondAttribute="centerY" id="sVW-4F-aSb"/>
+                            <constraint firstItem="rgD-Sr-h9S" firstAttribute="leading" secondItem="SsD-L3-TwT" secondAttribute="leading" id="xnx-43-41l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SsD-L3-TwT" secondAttribute="trailing" id="8AL-Ou-FCT"/>
+                <constraint firstItem="SsD-L3-TwT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bx9-Ym-BHm"/>
+                <constraint firstItem="SsD-L3-TwT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sdf-af-fbW"/>
+                <constraint firstAttribute="bottom" secondItem="SsD-L3-TwT" secondAttribute="bottom" id="utW-YT-iTa"/>
+            </constraints>
+            <size key="customSize" width="301" height="169"/>
+            <connections>
+                <outlet property="movieImage" destination="rgD-Sr-h9S" id="dDD-7F-uMy"/>
+                <outlet property="movieTitle" destination="2UK-HT-U2L" id="Fev-gO-9cZ"/>
+                <outlet property="movieYear" destination="sIH-fG-5WA" id="Owx-9W-Yy4"/>
+                <outlet property="view" destination="SsD-L3-TwT" id="Y8i-Yp-Ton"/>
+            </connections>
+            <point key="canvasLocation" x="318.32061068702291" y="60.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
