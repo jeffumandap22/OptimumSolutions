@@ -24,9 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     @IBAction func searchTapped(_ sender: Any) {
-        print("Searched")
-        let controller = MoviesSearchController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        search()
     }
     
     func setup(presenter: SearchPresenter) {
@@ -45,7 +43,6 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        search()
     }
     
     func search() {
